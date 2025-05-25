@@ -33,41 +33,56 @@
             <p>Berikut adalah proyek yang telah saya kerjakan:</p>
             <ul>
                 <li>Website Portofolio</li>
+                <li><a href="#to-do-list">To-Do List</a></li>
             </ul>
         </section>
         <section id="contact" class="form-section">
             <h2>Kontak</h2>
-            <form class="contact-form" novalidate>
-                <div class="form-group">
-                    <label for="name" class="form-label">Nama:</label>
-                    <input type="text" id="name" class="form-input">
-                    <div id="error-name" class="error-message"></div>
-                </div>
-                <div class="form-group">
-                    <label for="email" class="form-label">Email:</label>
-                    <input type="email" id="email" class="form-input">
-                    <div id="error-email" class="error-message"></div>
-                </div>
-                <div class="form-group">
-                    <label for="age" class="form-label">Umur:</label>
-                    <input type="number" id="age" class="form-input" min="0">
-                    <div id="error-age" class="error-message"></div>
-                </div>
-                <div class="form-group">
-                    <label for="phone" class="form-label">No. Telepon:</label>
-                    <input type="tel" id="phone" class="form-input">
-                    <div id="error-phone" class="error-message"></div>
+            <form class="contact-form" novalidate onsubmit="event.preventDefault();">
+                <div class="form-container">
+                    <div class="form-container-grup">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nama:</label>
+                            <input type="text" id="name" class="form-input">
+                            <div id="error-name" class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" id="email" class="form-input">
+                            <div id="error-email" class="error-message"></div>
+                        </div>
+                    </div>
+                    <div class="form-container-grup">
+                        <div class="form-group">
+                            <label for="age" class="form-label">Umur:</label>
+                            <input type="number" id="age" class="form-input" min="0">
+                            <div id="error-age" class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">No. Telepon:</label>
+                            <input type="tel" id="phone" class="form-input">
+                            <div id="error-phone" class="error-message"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="messages" class="form-label">Pesan:</label>
-                    <textarea id="messages" class="form-textarea" rows="4" cols="50"></textarea>
+                    <textarea id="messages" class="form-textarea" rows="4"></textarea>
                     <div id="error-messages" class="error-message"></div>
                 </div>
                 <button type="submit" class="form-button">Kirim</button>
                 <div id="form-success"></div>
             </form>
         </section>
+        <section id="to-do-list" class="to-do-list">
+            <h2>To-Do List</h2>
+            <div class="to-do-list-container">
+                <input type="text" id="tugas" placeholder="Masukkan tugas" class="tugas-input">
+                <button class="button-add" onclick="tambahTugas()">Tambah</button>
+                <ul class="daftar-tugas" id="daftar-tugas"></ul>
+            </div>
+        </section>
     </div>
     <script src="./js/main.js"></script>
 </body>
-</html>
+</html>                
